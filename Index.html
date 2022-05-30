@@ -1,97 +1,94 @@
 <!DOCTYPE html>
-<html lang="pt-br" class="dark">
+<html lang="pt-br">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Demo Tailwind</title>
-        <script src="https://cdn.tailwindcss.com"></script>
-        <script>
-            tailwind.config = {
-                theme: {
-                    extend: {
-                        colors: {
-                            clifford: '#da373d',
-                        }
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Tailwind</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'logo': '#000000',
                     }
                 }
             }
-            
-            module.exports = {
-                darkMode: 'class'
-            }
-        </script>
-        <style type="text/tailwindcss">
-            @layer utilities {
-            .content-auto {
-                content-visibility: auto;
-            }
-            }
-        </style>
-        <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
-    </head>
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+</head>
 
-    <body class="dark">
-        <div class="relative bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6">
-                <div
-                    class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
-                    <div class="flex justify-start lg:w-0 lg:flex-1">
-                        <a href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24"
-                                stroke="pink" stroke-width="2">
-                                <path stroke-linecap="round" stroke-linejoin="round"
-                                    d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
-                            </svg>
-                        </a>
+<body class="bg-logo">
+    <div class="relative bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div
+                class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+                <div class="flex justify-start lg:w-0 lg:flex-1">
+                    <a href="#" class="bg-logo">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24"
+                            stroke="pink" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 15.546c-.523 0-1.046.151-1.5.454a2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.704 2.704 0 00-3 0 2.704 2.704 0 01-3 0 2.701 2.701 0 00-1.5-.454M9 6v2m3-2v2m3-2v2M9 3h.01M12 3h.01M15 3h.01M21 21v-7a2 2 0 00-2-2H5a2 2 0 00-2 2v7h18zm-3-9v-2a2 2 0 00-2-2H8a2 2 0 00-2 2v2h12z" />
+                        </svg>
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-10">
+                    <div class="relative">
+                        <button type="button"
+                            class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                            aria-expanded="false">
+                            <span>Botão</span>
+                        </button>
                     </div>
-                    <nav class="hidden md:flex space-x-10">
-                        <div class="relative">
-                            <!-- Item active: "text-gray-900", Item inactive: "text-gray-500" -->
-                            <button type="button"
-                                class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                aria-expanded="false">
-                                <span>botão</span>
-                            </button>
-                        </div>
 
-                        <a href="#" class="selectded text-base font-medium text-gray-500 hover:text-gray-900"> Link </a>
-
-                        <div class="relative">
-                            <button type="button"
-                                class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                                aria-expanded="false">
-                                <span>Selecionado</span>
-                            </button>
-                        </div>
-                    </nav>
-                    <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-                        <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
-                            Entrar </a>
-                        <a href="#"
-                            class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
-                            Cadastre-se </a>
-                    </div>
+                    <a href="#" class="selectded text-base font-medium text-gray-500 hover:text-gray-900"> Link </a>
+                </nav>
+                <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                    <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
+                        Entrar </a>
+                    <a href="#"
+                        class="ml-8 whitespace-nowrap inline-flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700">
+                        Cadastre-se </a>
                 </div>
             </div>
+        </div>
 
-        </div>
-        <div
-            class="p-6 max-w-sm fixed bottom-2 right-2 bg-white dark:bg-black hover:bg-slate-200 rounded-xl shadow-lg flex items-center space-x-4 cursor-pointer">
-            <div class="shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="red"
-                    stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round"
-                        d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01" />
-                </svg>
-            </div>
-            <div>
-                <div class="text-xl font-medium text-black"><b>Uma ameaça foi detectada!</b></div>
-                <p class="text-slate-400 text-sm">O Módulo Internet do Avast! Bloqueou uma página web ou um arquivo nocivo.
+    </div>
+    <main class="mx-auto max-w-xl">
+        <h1 class="text-3xl font-bold">Increva-se na nossa Newsletter!</h1>
+        <p>Receba informações sobre atualizações, guias e dicas de aplicações do TailWind CSS diariamente em seu e-mail:</p>
+        <form>
+            <label>
+                <label for="email" class="block text-sm font-medium text-slate-700">Email</label>
+                <input type="email" id="email" class="peer placeholder:italic placeholder:text-slate-400 rounded-xl"
+                    placeholder="Seu melhor e-mail..." />
+                <p class="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
+                    Por favor, insira um endereço de E-mail valido.
                 </p>
-            </div>
+                <button>
+                    Inscrever-se
+                </button>
+            </label>
+        </form>
+    </main>
+    <div
+        class="p-6 max-w-sm fixed bottom-2 right-2 bg-white hover:bg-slate-200 rounded-xl shadow-lg flex items-center space-x-4 cursor-pointer">
+        <div class="shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="red"
+                stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M20.618 5.984A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016zM12 9v2m0 4h.01" />
+            </svg>
         </div>
-    </body>
+        <div>
+            <div class="text-xl font-medium text-black"><b>Uma ameaça foi detectada!</b></div>
+            <p class="text-slate-400 text-sm">O Módulo Internet do Avast! Bloqueou uma página web ou um arquivo nocivo.
+            </p>
+        </div>
+    </div>
+</body>
 
 </html>
