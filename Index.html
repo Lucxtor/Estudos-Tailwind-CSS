@@ -18,16 +18,20 @@
             }
         }
     </script>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+        function mostracard() {
+            document.getElementById('card').classList.remove('hidden');
+        }
+    </script>
 </head>
 
-<body class="bg-logo">
+<body>
     <div class="relative bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div
                 class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
                 <div class="flex justify-start lg:w-0 lg:flex-1">
-                    <a href="#" class="bg-logo">
+                    <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24"
                             stroke="pink" stroke-width="2">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -68,14 +72,14 @@
                 <p class="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
                     Por favor, insira um endereço de E-mail valido.
                 </p>
-                <button>
+                <button onClick="mostracard()">
                     Inscrever-se
                 </button>
             </label>
         </form>
     </main>
-    <div
-        class="p-6 max-w-sm fixed bottom-2 right-2 bg-white hover:bg-slate-200 rounded-xl shadow-lg flex items-center space-x-4 cursor-pointer">
+    <div id="card"
+        class="hidden p-6 max-w-sm fixed bottom-2 right-2 bg-white hover:bg-slate-200 rounded-xl shadow-lg flex items-center space-x-4 cursor-pointer">
         <div class="shrink-0">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="red"
                 stroke-width="2">
