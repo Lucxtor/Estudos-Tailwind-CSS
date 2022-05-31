@@ -12,7 +12,7 @@
             theme: {
                 extend: {
                     colors: {
-                        'logo': '#000000',
+                        'alerta': '#FF0000',
                     }
                 }
             }
@@ -29,7 +29,7 @@
     <div class="relative bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div
-                class="flex justify-between items-center border-b-2 border-gray-100 py-6 md:justify-start md:space-x-10">
+                class="flex justify-between items-center border-b-2 border-gray-100 py-6 sm:justify-start sm:space-x-10">
                 <div class="flex justify-start lg:w-0 lg:flex-1">
                     <a href="#">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24"
@@ -39,7 +39,7 @@
                         </svg>
                     </a>
                 </div>
-                <nav class="hidden md:flex space-x-10">
+                <nav class="flex space-x-10">
                     <div class="relative">
                         <button type="button"
                             class="text-gray-500 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -50,7 +50,7 @@
 
                     <a href="#" class="selectded text-base font-medium text-gray-500 hover:text-gray-900"> Link </a>
                 </nav>
-                <div class="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+                <div class="sm:flex items-center justify-end sm:flex-1 lg:w-0">
                     <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">
                         Entrar </a>
                     <a href="#"
@@ -61,7 +61,22 @@
         </div>
 
     </div>
-    <main class="mx-auto max-w-xl">
+    <main class="mx-auto max-w-xl sm:p-1">
+
+        <section>
+            <article class="md:block">
+                <img class="flex md:float-left md:p-3 md:w-1/3" src="https://m.media-amazon.com/images/I/41leUi8PoTL._AC_SX425_.jpg">
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam nihil illum et? Repellat debitis explicabo quam, doloribus sunt laudantium ad adipisci! Doloribus accusantium at cumque incidunt dolore quasi aliquid dolorem.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus fuga dolor a laborum minima. Enim, illum ipsa nostrum beatae voluptates incidunt delectus asperiores, fuga perferendis ipsum repellendus dicta dolorum exercitationem.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit rem fuga, in alias nobis, nulla non beatae aperiam obcaecati, perferendis adipisci maxime vel. Voluptatem aut repudiandae nostrum reprehenderit eius autem.
+                </p>
+            </article>
+        </section>
+        <br>
+
+
         <h1 class="text-3xl font-bold">Increva-se na nossa Newsletter!</h1>
         <p>Receba informações sobre atualizações, guias e dicas de aplicações do TailWind CSS diariamente em seu e-mail:</p>
         <form>
@@ -69,7 +84,7 @@
                 <label for="email" class="block text-sm font-medium text-slate-700">Email</label>
                 <input type="email" id="email" class="peer placeholder:italic placeholder:text-slate-400 rounded-xl"
                     placeholder="Seu melhor e-mail..." />
-                <p class="mt-2 invisible peer-invalid:visible text-pink-600 text-sm">
+                <p class="mt-2 invisible peer-invalid:visible text-alerta text-sm">
                     Por favor, insira um endereço de E-mail valido.
                 </p>
                 <button onClick="mostracard()">
